@@ -1,0 +1,14 @@
+# environment
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
+# data (downloaded, not committed / not in the zip)
+data/
+
+# course material
+course_docs/
+
+# files waiting to be deleted
+_to_delete/
