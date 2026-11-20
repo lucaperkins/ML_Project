@@ -1,6 +1,6 @@
 # Emotion classification on Reddit comments (GoEmotions)
 
-ESILV – Machine Learning project 2026-2027, Group XX.
+ESILV – Machine Learning project 2026-2027, Team member : PERKINS Luca, De GENTILE Océane, SAAID Myriam, NORAT Faizan.
 
 Multi-label classification of short English Reddit comments into 27 emotions + neutral, using the GoEmotions dataset (Demszky et al., 2020, simplified version: 43,410 train / 5,426 validation / 5,427 test).
 
