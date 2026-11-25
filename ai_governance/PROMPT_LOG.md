@@ -12,6 +12,7 @@ Any substantial AI-generated code or text must be listed here (undisclosed AI us
 | `notebooks/01_eda_simple.ipynb` | Claude | Code and summary | |
 | `README.md`, `requirements.txt`, `ai_governance/` templates | Claude | Structure and text | |
 | Project specification (week 1) | Claude | First draft | |
+| `notebooks/04_transformer.ipynb` (step 1) | Claude | Code and explanations | Océane de Gentile (run, checked, findings written) |
 
 ---
 
