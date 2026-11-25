@@ -13,7 +13,7 @@ Any substantial AI-generated code or text must be listed here (undisclosed AI us
 | `README.md`, `requirements.txt`, `ai_governance/` templates | Claude | Structure and text | |
 | Project specification (week 1) | Claude | First draft | |
 | `notebooks/04_transformer.ipynb` (step 1) | Claude | Code and explanations | Océane de Gentile (run, checked, findings written) |
-
+| `src/evaluation.py`, `src/robustness_suite.csv`, `notebooks/02_evaluation_tools.ipynb` | Claude | Code and first draft of the test messages | Myriam SAAID |
 ---
 
 ## Entry 1

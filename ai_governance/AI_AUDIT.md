@@ -20,4 +20,11 @@ Typical categories from the rubric: data leakage, wrong metric for imbalanced da
 
 ## Flaw 2
 
-_(same template)_
+- **Found by:** Myriam SAAID
+- **Date:** 2026-11-25
+- **Where:** `src/evaluation.py` and `notebooks/02_evaluation_tools.ipynb`, check 2.3
+- **What the AI produced:** a helper named `_f1_from_counts`, imported in the notebook with `from evaluation import *`.
+- **Why it is wrong:** Python's `import *` skips names starting with `_`, so the check comparing our bootstrap F1 with scikit-learn crashed with a `NameError`. Without this check, an error in the bootstrap F1 would have gone unnoticed and given wrong confidence intervals.
+- **How we detected it:** by running the notebook end to end before using the functions.
+- **Fix:** the function was renamed `f1_from_counts`.
+- **Impact:** no metric change; the check now confirms the bootstrap F1 equals scikit-learn's exactly.
