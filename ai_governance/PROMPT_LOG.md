@@ -12,7 +12,7 @@ Any substantial AI-generated code or text must be listed here (undisclosed AI us
 | `notebooks/01_eda_simple.ipynb` | Claude | Code and summary | Luca PERKINS |
 | `README.md`, `requirements.txt`, `ai_governance/` templates | Claude | Structure and text | |
 | Project specification (week 1) | Claude | First draft | |
-| `notebooks/04_transformer.ipynb` (step 1) | Claude | Code and explanations | Océane de Gentile (run, checked, findings written) |
+| `notebooks/04_transformer.ipynb` (steps 1 and 2) | Claude | Code and explanations | Océane de Gentile (run, checked, findings written) |
 | `src/evaluation.py`, `src/robustness_suite.csv`, `notebooks/02_evaluation_tools.ipynb` | Claude | Code and first draft of the test messages | Myriam SAAID |
 ---
 | `notebooks/01_eda_simple.ipynb` – Sections 12.1, 12.2 and Parquet checks | ChatGPT | Suggested verification code and interpretation | Faizan NORAT |
