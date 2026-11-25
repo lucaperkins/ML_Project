@@ -1,0 +1,19 @@
+model,param_tfidf__ngram_range,param_clf__estimator__C,param_clf__estimator__class_weight,param_clf__estimator__estimator__C,param_clf__estimator__alpha,mean_test_score,std_test_score
+LogisticRegression,"(1, 1)",4.0,,,,0.394,0.006
+LogisticRegression,"(1, 2)",4.0,,,,0.392,0.009
+CalibratedClassifierCV,"(1, 2)",,,0.5,,0.39,0.01
+LogisticRegression,"(1, 2)",10.0,,,,0.388,0.009
+LogisticRegression,"(1, 2)",4.0,balanced,,,0.387,0.009
+LogisticRegression,"(1, 1)",1.0,,,,0.386,0.006
+LogisticRegression,"(1, 2)",10.0,balanced,,,0.384,0.009
+CalibratedClassifierCV,"(1, 2)",,,0.1,,0.383,0.009
+LogisticRegression,"(1, 2)",1.0,balanced,,,0.383,0.009
+LogisticRegression,"(1, 1)",10.0,,,,0.382,0.005
+LogisticRegression,"(1, 1)",1.0,balanced,,,0.381,0.006
+LogisticRegression,"(1, 1)",4.0,balanced,,,0.377,0.006
+LogisticRegression,"(1, 2)",1.0,,,,0.375,0.008
+LogisticRegression,"(1, 1)",10.0,balanced,,,0.366,0.004
+MultinomialNB,"(1, 2)",,,,0.1,0.24,0.003
+MultinomialNB,"(1, 1)",,,,0.1,0.209,0.002
+MultinomialNB,"(1, 2)",,,,0.5,0.149,0.001
+MultinomialNB,"(1, 1)",,,,0.5,0.138,0.002
