@@ -7,14 +7,14 @@ Typical categories from the rubric: data leakage, wrong metric for imbalanced da
 
 ## Flaw 1
 
-- **Found by:**
-- **Date:**
-- **Where:** file / notebook cell / report section
-- **What the AI produced:** short quote or code excerpt
-- **Why it is wrong:** the concrete consequence (e.g. inflated validation score, biased estimate)
-- **How we detected it:** check, test or reasoning used
-- **Fix:** what we changed (link to commit or cell)
-- **Impact:** metric before → after, if measurable
+- **Found by:** Océane de Gentile
+- **Date:** 2026-11-25
+- **Where:** `notebooks/04_transformer.ipynb`, section 5 (choice of the tokenizer)
+- **What the AI produced:** the justification "Cased keeps capital letters, so the signal is kept", used to choose `distilbert-base-cased`.
+- **Why it is wrong:** the claim is only half true. The cased vocabulary contains "why" and "Why" but not "WHY", so words fully written in capitals are split into meaningless sub-tokens ("WHY" -> W, ##H, ##Y; "FUCK" -> F, ##UC, ##K). The model sees that the text is shouted but partly loses the meaning of the word.
+- **How we detected it:** we printed the tokenization of examples taken from the EDA instead of trusting the explanation.
+- **Fix:** the justification is rewritten as a trade-off (keeps the capital-letter signal, fragments full-capital words), and cased vs uncased will be compared experimentally in step 3.
+- **Impact:** no metric yet; it prevents an unsupported claim in the report and adds an experiment to the plan.
 
 ---
 
