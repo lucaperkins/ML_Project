@@ -28,3 +28,16 @@ Typical categories from the rubric: data leakage, wrong metric for imbalanced da
 - **How we detected it:** by running the notebook end to end before using the functions.
 - **Fix:** the function was renamed `f1_from_counts`.
 - **Impact:** no metric change; the check now confirms the bootstrap F1 equals scikit-learn's exactly.
+
+---
+
+## Flaw 3 – Incorrect duplicate statistics
+
+- **Found by:** Faizan NORAT
+- **Date:** 2026-11-25
+- **Where:** `notebooks/01_eda_simple.ipynb` – Data preparation
+- **What the AI produced:** The initial documentation stated that 62 groups of duplicate texts had different emotion annotations.
+- **Why it is wrong:** The figure was not supported by an explicit calculation.
+- **How we detected it:** We grouped comments by normalized text and counted distinct label combinations. The calculation returned 61 groups under the previous lowercase-only normalization policy. The updated text-cleaning pipeline is checked separately.
+- **Fix:** Added a reproducible check in Section 12.2 (previously 11.2) and corrected the documentation.
+- **Impact:** The reported statistic is now verified and reproducible.
