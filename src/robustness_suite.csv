@@ -1,0 +1,33 @@
+text,category,expected
+I am not happy with this at all.,negation,disappointment;annoyance
+This is not bad actually.,negation,approval;admiration
+I don't hate it.,negation,approval
+"Never been so scared in my life, wow.",negation,fear
+I can't thank you enough!,negation,gratitude
+I wouldn't say I'm angry.,negation,neutral
+Nothing about this makes me sad anymore.,negation,relief
+"Oh great, another Monday. Just what I needed.",sarcasm,annoyance;disappointment
+"Wow, thanks for nothing.",sarcasm,annoyance;disappointment
+"Yeah, because that worked so well last time.",sarcasm,disapproval;annoyance
+"Sure, I just love waiting two hours on hold.",sarcasm,annoyance;anger
+"Brilliant idea, really. Genius.",sarcasm,disapproval;annoyance
+"Oh fantastic, my phone died again.",sarcasm,annoyance;disappointment
+Thanks!,short,gratitude
+Wow.,short,surprise;excitement
+Ugh.,short,annoyance;disgust
+lol,short,amusement
+Why?,short,confusion;curiosity
+Ok.,short,neutral
+Sorry.,short,remorse;sadness
+I love you guys so much,clear,love
+This makes me furious.,clear,anger
+I'm terrified of what comes next.,clear,fear;nervousness
+I miss her every single day.,clear,sadness;grief
+That's disgusting.,clear,disgust
+"Thank you so much, this really helped.",clear,gratitude
+"I passed my exam, I'm so proud!",clear,pride;joy
+"I'm happy for you, but I'll miss you.",mixed,joy;sadness
+"Funny, but also kind of sad when you think about it.",mixed,amusement;sadness
+"I'm nervous, but excited for tomorrow.",mixed,nervousness;excitement
+The meeting is at 3pm in room B.,neutral_fact,neutral
+He posted the link yesterday.,neutral_fact,neutral
