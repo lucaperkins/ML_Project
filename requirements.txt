@@ -4,6 +4,9 @@ datasets==5.2.0
 huggingface_hub==2.4.0
 pyarrow==26.0.1
 
+# Text cleaning
+emoji==2.16.0
+
 # Data / ML
 numpy==2.5.5
 pandas==3.1.1

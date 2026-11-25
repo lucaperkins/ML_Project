@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 The GoEmotions simplified splits are downloaded automatically with `datasets.load_dataset("google-research-datasets/go_emotions", "simplified")`. No manual download is needed.
 
-`01_eda_simple.ipynb` cleans the splits (duplicates removed, labels at 28 / Ekman / sentiment level) and saves them to `data/processed/` (`train.parquet`, `validation.parquet`, `test.parquet`). The modelling notebooks read these files, so run `01` once first. `data/` is not committed.
+`01_eda_simple.ipynb` cleans the splits (emojis converted to text, repeated letters shortened, duplicates removed, labels at 28 / Ekman / sentiment level) and saves them to `data/processed/` (`train.parquet`, `validation.parquet`, `test.parquet`). The modelling notebooks read these files, so run `01` once first. `data/` is not committed.
 
 ## How to run
 
