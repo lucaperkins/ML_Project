@@ -5,8 +5,7 @@ Typical categories from the rubric: data leakage, wrong metric for imbalanced da
 
 ---
 
-## Flaw 1
-
+## Flaw model
 - **Found by:**
 - **Date:**
 - **Where:** file / notebook cell / report section
@@ -18,6 +17,13 @@ Typical categories from the rubric: data leakage, wrong metric for imbalanced da
 
 ---
 
-## Flaw 2
+## Flaw 1 – Incorrect duplicate statistics
 
-_(same template)_
+- **Found by:** Faizan NORAT
+- **Date:** 2026-11-25
+- **Where:** `notebooks/01_eda_simple.ipynb` – Data preparation
+- **What the AI produced:** The initial documentation stated that 62 groups of duplicate texts had different emotion annotations.
+- **Why it is wrong:** The figure was not supported by an explicit calculation.
+- **How we detected it:** We grouped comments by normalized text and counted distinct label combinations. The calculation returned 61 groups.
+- **Fix:** Added a reproducible check in Section 11.2 and corrected the documentation.
+- **Impact:** The reported statistic is now verified and reproducible.
