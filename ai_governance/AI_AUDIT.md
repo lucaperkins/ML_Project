@@ -97,3 +97,16 @@ The notebook was executed again, and the existing
 **Lesson learned:**
 AI-generated file export operations must be checked
 for unintended overwriting and reproducibility issues.
+
+---
+
+## Flaw 7 – Random forest configuration that runs out of memory
+
+- **Owner:** Luca PERKINS
+- **Date:** 2026-11-27
+- **Where:** `notebooks/05_ensembles.ipynb`, section 3.2 (grid search on the random forest)
+- **What the AI produced:** a random forest with fully grown trees (`min_samples_leaf = 1`, 100 trees) on the TF-IDF features, the scikit-learn default, proposed as a candidate of the grid search.
+- **Why it is wrong:** a fully grown tree keeps one leaf per few comments, and in a multi-label forest every node stores a value for each of the 28 labels. On 43,188 comments and 15,265 sparse features, the forest took several GB of memory: the process was killed on a 7 GB machine, so it would also crash an 8 GB laptop. It was also the worst setting: validation macro-F1 0.447 against 0.461 with `min_samples_leaf = 5` (single fit), i.e. more variance for no gain.
+- **How we detected it:** the prototype run crashed with an out-of-memory kill (exit code 137) when the fitted forest was measured.
+- **Fix:** `min_samples_leaf = 1` was removed from the grid, which now tests leaves of 3, 5 and 10 (about 60 MB for leaves of 5); the notebook explains why. The same bias–variance effect is shown on a single decision tree (section 3.1), where it is cheap to measure.
+- **Impact:** the notebook runs on the team's laptops; the retained forest (leaves of 3) scores 0.447 alone and improves the soft vote (0.488 without it, 0.495 with it).
