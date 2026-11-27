@@ -41,3 +41,29 @@ Typical categories from the rubric: data leakage, wrong metric for imbalanced da
 - **How we detected it:** We grouped comments by normalized text and counted distinct label combinations. The calculation returned 61 groups under the previous lowercase-only normalization policy. The updated text-cleaning pipeline is checked separately.
 - **Fix:** Added a reproducible check in Section 12.2 (previously 11.2) and corrected the documentation.
 - **Impact:** The reported statistic is now verified and reproducible.
+
+---
+
+## Flaw 4 – Text cleaning that silently changed 2,700 texts
+
+- **Owner:** Luca PERKINS
+- **Date:** 2026-11-25
+- **Where:** `notebooks/01_eda_simple.ipynb`, section 11 (`clean_text`)
+- **What the AI produced:** a cleaning function that converted emojis to text, shortened repeated letters, then ran `re.sub(r" {2,}", " ", text).strip()` on **every** text, to remove the double spaces created by the emoji conversion.
+- **Why it is wrong:** the agreed cleaning was only emojis and repeated letters. The space step also rewrote texts that contain neither (original double spaces, leading or trailing spaces), so the cleaning changed more data than documented. It is harmless for the tokenizers, but the report would have stated the wrong number of modified texts and the step was not agreed by the team.
+- **How we detected it:** the notebook counts the texts changed by the cleaning. It reported 3,892 changed train texts, while only about 2.8% of train comments (about 1,200) contain an emoji or a repeated letter. The gap pointed to a third, unintended change.
+- **Fix:** the space clean-up now runs only when an emoji was converted. The count fell to 1,212 train, 153 validation and 158 test texts, consistent with the share of comments with emojis (1.94%) or repeated letters (0.88%).
+- **Impact:** 2,680 train texts no longer modified; the documented cleaning now matches what the code does.
+
+---
+
+## Flaw 5 – Regex that crashes under pandas 3
+
+- **Owner:** Luca PERKINS
+- **Date:** 2026-11-25
+- **Where:** `notebooks/01_eda_simple.ipynb`, section 11 (statistics of the cleaning)
+- **What the AI produced:** `df["text_raw"].str.contains(r"([A-Za-z])\1{3,}")` to count comments with a letter repeated more than 3 times.
+- **Why it is wrong:** since pandas 3, text columns use the PyArrow string engine, whose regex engine (RE2) does not support back-references such as `\1`. The cell raised `ArrowInvalid: invalid escape sequence: \1`. The same pattern works with Python's `re`, so the code looked correct and would have worked with pandas 2: an API assumption that is no longer true for our pinned version (`pandas==3.1.1`).
+- **How we detected it:** running the notebook end to end before pushing it.
+- **Fix:** `df["text_raw"].apply(lambda t: re.search(r"([A-Za-z])\1{3,}", t) is not None)`, with a comment explaining why `str.contains` is not used.
+- **Impact:** no metric change; the notebook runs with the pinned versions of `requirements.txt`.
