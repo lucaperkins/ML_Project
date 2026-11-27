@@ -1,0 +1,33 @@
+text,category,expected,Baseline,Baseline hit,Soft vote,Soft vote hit,Transformer,Transformer hit,Transformer + baseline,Transformer + baseline hit
+I am not happy with this at all.,negation,disappointment;annoyance,joy,False,disapproval;joy,False,disappointment;disapproval;sadness,True,disappointment;disapproval;joy;sadness,True
+This is not bad actually.,negation,approval;admiration,disappointment;disapproval,False,disappointment;disapproval,False,approval;disapproval,True,approval;disapproval,True
+I don't hate it.,negation,approval,anger;annoyance;confusion;disapproval,False,anger;annoyance;disapproval,False,anger;disapproval,False,anger;annoyance;disapproval,False
+"Never been so scared in my life, wow.",negation,fear,fear;surprise,True,fear;surprise,True,fear;surprise,True,fear;surprise,True
+I can't thank you enough!,negation,gratitude,gratitude,True,gratitude,True,disapproval;gratitude,True,gratitude,True
+I wouldn't say I'm angry.,negation,neutral,anger;disapproval,False,anger;disapproval,False,anger,False,anger,False
+Nothing about this makes me sad anymore.,negation,relief,disappointment;sadness,False,disappointment;sadness,False,sadness,False,sadness,False
+"Oh great, another Monday. Just what I needed.",sarcasm,annoyance;disappointment,admiration,False,admiration,False,admiration,False,admiration,False
+"Wow, thanks for nothing.",sarcasm,annoyance;disappointment,gratitude;surprise,False,gratitude;surprise,False,gratitude,False,gratitude;surprise,False
+"Yeah, because that worked so well last time.",sarcasm,disapproval;annoyance,approval;disappointment;neutral,False,approval,False,approval,False,approval,False
+"Sure, I just love waiting two hours on hold.",sarcasm,annoyance;anger,love,False,approval;love,False,love,False,love,False
+"Brilliant idea, really. Genius.",sarcasm,disapproval;annoyance,admiration,False,admiration,False,admiration,False,admiration,False
+"Oh fantastic, my phone died again.",sarcasm,annoyance;disappointment,admiration;grief,False,admiration;grief,False,grief,False,admiration,False
+Thanks!,short,gratitude,gratitude,True,gratitude,True,gratitude,True,gratitude,True
+Wow.,short,surprise;excitement,admiration;excitement;surprise,True,admiration;excitement;surprise,True,excitement;surprise,True,excitement;surprise,True
+Ugh.,short,annoyance;disgust,annoyance;disgust;neutral,True,annoyance;disgust;neutral,True,disgust,True,annoyance;disgust,True
+lol,short,amusement,amusement,True,amusement,True,amusement,True,amusement,True
+Why?,short,confusion;curiosity,confusion;curiosity,True,confusion;curiosity;neutral,True,neutral,False,confusion;curiosity,True
+Ok.,short,neutral,approval;neutral,True,anger;approval;neutral,True,approval;neutral,True,approval;neutral,True
+Sorry.,short,remorse;sadness,remorse;sadness,True,remorse;sadness,True,remorse,True,remorse;sadness,True
+I love you guys so much,clear,love,love,True,love,True,love,True,love,True
+This makes me furious.,clear,anger,anger,True,anger,True,anger,True,anger,True
+I'm terrified of what comes next.,clear,fear;nervousness,fear,True,fear,True,fear,True,fear,True
+I miss her every single day.,clear,sadness;grief,disappointment;sadness;neutral,True,disappointment;sadness,True,sadness,True,disappointment;sadness,True
+That's disgusting.,clear,disgust,disgust,True,disgust,True,disgust,True,disgust,True
+"Thank you so much, this really helped.",clear,gratitude,gratitude,True,gratitude,True,gratitude,True,gratitude,True
+"I passed my exam, I'm so proud!",clear,pride;joy,pride,True,admiration;pride,True,pride,True,admiration;pride,True
+"I'm happy for you, but I'll miss you.",mixed,joy;sadness,disappointment;joy;remorse;sadness,True,caring;joy;sadness,True,sadness,True,joy;sadness,True
+"Funny, but also kind of sad when you think about it.",mixed,amusement;sadness,amusement;sadness,True,amusement;sadness,True,amusement;sadness,True,amusement;sadness,True
+"I'm nervous, but excited for tomorrow.",mixed,nervousness;excitement,excitement;nervousness,True,excitement;nervousness,True,nervousness,True,excitement;nervousness,True
+The meeting is at 3pm in room B.,neutral_fact,neutral,disapproval;neutral,True,neutral,True,neutral,True,neutral,True
+He posted the link yesterday.,neutral_fact,neutral,neutral,True,approval;neutral,True,neutral,True,neutral,True

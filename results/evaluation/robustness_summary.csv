@@ -1,0 +1,29 @@
+category,n,hit_rate,ci_low,ci_high,model
+clear,7,1.0,0.646,1.0,Baseline
+mixed,3,1.0,0.438,1.0,Baseline
+negation,7,0.286,0.082,0.641,Baseline
+neutral_fact,2,1.0,0.342,1.0,Baseline
+sarcasm,6,0.0,0.0,0.39,Baseline
+short,7,1.0,0.646,1.0,Baseline
+ALL,32,0.656,0.483,0.796,Baseline
+clear,7,1.0,0.646,1.0,Soft vote
+mixed,3,1.0,0.438,1.0,Soft vote
+negation,7,0.286,0.082,0.641,Soft vote
+neutral_fact,2,1.0,0.342,1.0,Soft vote
+sarcasm,6,0.0,0.0,0.39,Soft vote
+short,7,1.0,0.646,1.0,Soft vote
+ALL,32,0.656,0.483,0.796,Soft vote
+clear,7,1.0,0.646,1.0,Transformer
+mixed,3,1.0,0.438,1.0,Transformer
+negation,7,0.571,0.25,0.842,Transformer
+neutral_fact,2,1.0,0.342,1.0,Transformer
+sarcasm,6,0.0,0.0,0.39,Transformer
+short,7,0.857,0.487,0.974,Transformer
+ALL,32,0.688,0.514,0.82,Transformer
+clear,7,1.0,0.646,1.0,Transformer + baseline
+mixed,3,1.0,0.438,1.0,Transformer + baseline
+negation,7,0.571,0.25,0.842,Transformer + baseline
+neutral_fact,2,1.0,0.342,1.0,Transformer + baseline
+sarcasm,6,0.0,0.0,0.39,Transformer + baseline
+short,7,1.0,0.646,1.0,Transformer + baseline
+ALL,32,0.719,0.546,0.844,Transformer + baseline

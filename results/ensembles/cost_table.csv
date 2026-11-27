@@ -1,10 +1,10 @@
 model,macro_F1,inference_ms_per_1000,size_MB,interpretability
-decision_tree,0.337,8.224,2.027,"High: one tree, rules can be read (but very deep)"
-forest,0.447,48.715,120.281,Low: 100 trees; only global feature importances
-logreg_word,0.477,13.442,3.742,High: one weight per word and label
-logreg_char,0.468,102.362,18.761,Medium: weights on character pieces
-svm_word,0.465,42.118,48.169,"Medium: linear weights, but calibrated scores"
-bagging_logreg,0.476,60.614,68.819,Medium: average of 10 linear models
-voting_linear,0.488,157.922,70.672,Medium: average of 3 linear models
-voting_soft,0.495,206.637,190.953,Low: linear models + forest
-stacking,0.484,206.637,190.986,Low: two levels of models
+decision_tree,0.337,10.297,2.027,"High: one tree, rules can be read (but very deep)"
+forest,0.447,49.35,120.281,Low: 100 trees; only global feature importances
+logreg_word,0.477,12.116,3.742,High: one weight per word and label
+logreg_char,0.468,102.106,18.761,Medium: weights on character pieces
+svm_word,0.465,38.437,48.169,"Medium: linear weights, but calibrated scores"
+bagging_logreg,0.476,61.786,68.819,Medium: average of 10 linear models
+voting_linear,0.488,152.66,70.672,Medium: average of 3 linear models
+voting_soft,0.495,202.01,190.953,Low: linear models + forest
+stacking,0.484,202.01,190.986,Low: two levels of models
