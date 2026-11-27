@@ -17,6 +17,9 @@ Any substantial AI-generated code or text must be listed here (undisclosed AI us
 ---
 | `notebooks/01_eda_simple.ipynb` – Sections 12.1, 12.2 and Parquet checks | ChatGPT | Suggested verification code and interpretation | Faizan NORAT |
 | Merge of EDA and governance files | ChatGPT | Integration of checks and documentation | Pending team review |
+| Week 2 project report | ChatGPT | Assistance with experimental results, methodological corrections and report editing | Faizan NORAT |
+| `results/error_analysis/error_examples.csv` | ChatGPT | Proposed qualitative categorization and interpretation of 50 misclassified comments | Faizan NORAT (integration; human validation to be confirmed) |
+| Stacking methodology review | ChatGPT | Assistance with leakage audit and identification of methodological limitations | Faizan NORAT |
 
 ---
 
