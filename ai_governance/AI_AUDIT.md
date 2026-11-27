@@ -67,3 +67,33 @@ Typical categories from the rubric: data leakage, wrong metric for imbalanced da
 - **How we detected it:** running the notebook end to end before pushing it.
 - **Fix:** `df["text_raw"].apply(lambda t: re.search(r"([A-Za-z])\1{3,}", t) is not None)`, with a comment explaining why `str.contains` is not used.
 - **Impact:** no metric change; the notebook runs with the pinned versions of `requirements.txt`.
+
+### Flaw 6 — Annotation file overwritten on rerun
+
+**Author:** Faizan NORAT
+**AI tool:** ChatGPT
+**Week:** 3
+
+**Problem:**
+The initial AI-generated qualitative error analysis
+code recreated error_examples.csv every time the
+notebook was executed.
+
+**Risk:**
+Running all cells after annotating the comments
+could overwrite the existing annotations.
+
+**Correction:**
+An os.path.exists() condition was added to preserve
+the existing annotation file.
+
+An empty-data condition was also added to prevent
+plotting errors when no annotations are available.
+
+**Verification:**
+The notebook was executed again, and the existing
+50 annotations were preserved.
+
+**Lesson learned:**
+AI-generated file export operations must be checked
+for unintended overwriting and reproducibility issues.

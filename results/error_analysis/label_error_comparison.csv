@@ -1,0 +1,6 @@
+model,total_label_errors,corrected_label_errors,new_label_errors
+baseline,7281,0,0
+soft_voting,6646,1715,1080
+stacking,6909,2144,1772
+random_forest,6950,2723,2392
+bagging,7312,933,964

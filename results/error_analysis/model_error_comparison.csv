@@ -1,0 +1,6 @@
+model,correct_comments,incorrect_comments,baseline_errors_corrected,new_errors,shared_errors
+baseline,1659,3718,0,0,3718
+soft_voting,1856,3521,450,253,3268
+stacking,1723,3654,479,415,3239
+random_forest,1785,3592,603,477,3115
+bagging,1611,3766,209,257,3509
