@@ -1,0 +1,11 @@
+run,model,lr,seed,weighted_loss,best_epoch,macro_f1,micro_f1
+distilbert-base-cased_lr2e-05_seed42,cased,2e-05,42,False,4.0,0.485,0.585
+distilbert-base-cased_lr3e-05_seed42,cased,3e-05,42,False,4.0,0.504,0.587
+distilbert-base-cased_lr5e-05_seed42,cased,5e-05,42,False,3.0,0.508,0.582
+distilbert-base-uncased_lr5e-05_seed42,uncased,5e-05,42,False,4.0,0.503,0.583
+distilbert-base-cased_lr5e-05_seed42_posw-sqrt,cased,5e-05,42,True,4.0,0.526,0.588
+distilbert-base-cased_lr5e-05_seed43_posw-sqrt,cased,5e-05,43,True,2.0,0.523,0.586
+distilbert-base-cased_lr5e-05_seed44_posw-sqrt,cased,5e-05,44,True,2.0,0.516,0.584
+distilbert-base-cased_lr5e-05_seed43,cased,5e-05,43,False,4.0,0.509,0.588
+distilbert-base-cased_lr5e-05_seed44,cased,5e-05,44,False,4.0,0.503,0.582
+ensemble of 3 seeds (weighted loss),cased,5e-05,42+43+44,True,,0.524,0.589
